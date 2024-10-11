@@ -1,0 +1,76 @@
+#review .container {
+    flex-direction: column;
+}
+
+.reviews {
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+    margin-bottom: 40px;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+}
+
+.client-container {
+    margin-top: 40px;
+    display: flex;
+    gap: 16px;
+}
+
+.client-container img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.client-details :nth-child(1) {
+    color: var(--font-color-3);
+}
+
+.client-details :nth-child(2) {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.comment {
+    position: relative;
+    margin-top: 16px;
+    padding: 16px 24px;
+    background-color: var(--primary-color);
+}
+
+.comment p {
+    color: var(--font-color-2);
+}
+
+.triangle-1 {
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    width: 40px;
+    height: 40px;
+    background-color: #355692a2;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.triangle-2 {
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    width: 40px;
+    height: 40px;
+    background-color: #355692a2;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+/*değerlendirme kriteri 7: responsive tasarım*/
+@media (max-width: 575.98px) {
+    .reviews {
+        flex-direction: column;
+        gap: 40px;
+    }
+}

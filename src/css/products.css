@@ -1,0 +1,90 @@
+#products .container {
+    flex-direction: column;
+}
+
+#products .products {
+    display: flex;
+    gap: 16px;
+}
+
+#products .product-card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    text-align: center;
+    width: 25%;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) ;
+    align-items: center;
+}
+
+#products .product-card img {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+}
+
+.product-card h3 {
+    width: 100%;
+    padding: 0 16px;
+    margin-bottom: 8px;
+}
+
+.product-card p {
+    padding: 0 16px;
+    font-size: 18px;
+    color: var(--font-color-3);
+}
+
+.product-card p span {
+    color: var(--font-color-1);
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: line-through;
+}
+
+.product-card .add-btn {
+    width: 100%;
+    display: flex;
+    max-width: 280px;
+    padding: 16px 24px;
+}
+
+.product-card .add-btn a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-weight: 600;
+}
+
+.product-card .add-btn a i {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+}
+
+/*değerlendirme kriteri 7: responsive tasarım*/
+@media (max-width: 575.98px) {
+    #products .products {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    #products .product-card {
+        margin-top: 24px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .product-card h3 {
+        font-size: 28px;
+        width: 100%;
+        padding: 0 16px;
+    }
+}

@@ -1,0 +1,136 @@
+.bmi-container {
+    width: 100%;
+    display: flex;
+    gap: 24px;
+}
+
+.bmi-container .content {
+    width: 50%;
+}
+
+#bmi-calculator .bmi-result {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#bmi-calculator .input-group {
+    margin-top: 8px;
+    display: flex ;
+    align-items: center;
+}
+
+#bmi-calculator .input-group :nth-child(1) {
+    margin-right: 8px;
+}
+
+#bmi-calculator .input-group :nth-child(2) {
+    margin-left: 24px;
+    margin-right: 8px;
+}
+
+#bmi-calculator .input-group input {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--font-color-1);
+}
+
+#bmi-category {
+    font-weight: 500;
+}
+
+#bmi-result .bmi-ranges {
+    margin-top: 8px;
+}
+
+.bmi-ranges {
+    position: relative;
+}
+
+#bmi-result .bmi-ranges img {
+    width: 100%;
+}
+
+#bmi-indicator {
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 20px solid var(--secondary-color);
+    position: absolute;
+    transition: 150ms ease-in;
+    top: 100%;
+    left: 15%;
+    display: none;
+}
+
+.underweight {
+    color: blue;
+}
+
+.normal {
+    color: green;
+}
+
+.overweight {
+    color: rgb(207, 207, 41);
+}
+
+.obese {
+    color: var(--secondary-color);
+}
+
+.extremely-obese {
+    color: red;
+}
+
+/*değerlendirme kriteri 7: responsive tasarım*/
+@media (max-width: 575.98px) {
+    .bmi-container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .bmi-container .content {
+        width: 100%;
+    }
+    
+    .bmi-container .content h2 {
+        width: 100%;
+        font-size: 48px;
+        text-align: center;
+    }
+
+    #bmi-calculator .bmi-result {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #bmi-calculator .input-group {
+        margin-top: 8px;
+        display: flex ;
+        flex-direction: column;
+        gap: 8px;
+        align-items: start;
+    }
+    
+
+    #bmi-calculator .input-group :nth-child(2) {
+        margin-left: 0;
+    }
+    
+    #bmi-calculator .input-group input {
+        padding: 8px 12px;
+        border-radius: 4px;
+        border: 1px solid var(--font-color-1);
+    }
+
+    #bmi-indicator {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 14px solid var(--secondary-color);
+    }
+}

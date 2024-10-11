@@ -1,0 +1,157 @@
+#hero .hero-content {
+    background-image: url(../assets/images/hero-man.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-position: 0px -160px;*/
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding-top: 280px;
+    padding-bottom: 240px;
+    gap: 12px;
+}
+
+#hero .badge {
+    padding: 4px 12px;
+    width: fit-content;
+    background-color: var(--primary-color);
+    color: var(--font-color-2);
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: ease 250ms;
+}
+
+
+#hero .desc {
+    padding: 8px 8px;
+    color: var(--font-color-2);
+    font-size: 24px;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.60);
+    backdrop-filter: saturate(180%) blur(4px);
+    transition: 0.5s;
+}
+
+#hero .btn-group {
+    display: flex;
+    gap: 16px;
+}
+
+#hero .btn-group :nth-child(1) {
+    padding: 12px 16px;
+    color: var(--font-color-2);
+    font-size: 20px;
+    font-weight: 800;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+
+    &:hover {
+        background-color: #4a689e;
+        transition: ease-in-out 150ms;
+    }
+}
+
+#hero .btn-group :nth-child(2) {
+    border: 1px solid var(--font-color-2);
+    padding: 12px 16px;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 4px;
+    color: var(--font-color-2);
+    background-color:rgba(0, 0, 0, 0.60);
+
+    &:hover {
+        background-color:rgba(0, 0, 0, 0.80);
+        backdrop-filter: saturate(180%) blur(4px);
+        transition: ease-in-out 150ms;
+    }
+}
+
+#hero .stats-div{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+#hero .stat {
+    width: 340px;
+    background-color: var(--font-color-2);
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 4px;
+    gap: 12px;
+}
+
+#hero .stat h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+#hero .stat p {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--font-color-3);
+}
+
+/*değerlendirme kriteri 7: responsive tasarım*/
+@media (max-width: 575.98px) {
+    #hero .hero-content {
+        background-size: 200% 100%;
+        background-position: -160px 0px;
+        padding-top: 140px;
+        padding-bottom: 24px;
+        gap: 12px;
+    }
+
+    #hero .badge {
+        padding: 4px 12px;
+        font-size: 16px;
+    }
+
+    #hero .desc {
+        padding: 8px 8px;
+        font-size: 16px;
+    }
+
+    #hero .btn-group {
+        text-align: center;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    #hero .btn-group :nth-child(1) {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    #hero .btn-group :nth-child(2) {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    #hero .stats-div{
+        padding-top: 24px;
+        padding-bottom: 24px;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    #hero .stat {
+        width: 100%;
+        padding: 24px 12px;
+        border-radius: 4px;
+        gap: 12px;
+    }
+
+    #hero .line {
+        display: none;
+    }
+}

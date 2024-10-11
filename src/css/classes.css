@@ -1,0 +1,121 @@
+#classes {
+    position: relative;
+}
+
+#classes .shape {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #dedede70;
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+#classes .container{
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+#classes .class-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+    margin-top: 80px;
+    width: 100%;
+} 
+
+#classes .class-btn-group .class-btn {
+    position: relative;
+    width: fit-content;
+    padding: 12px 24px;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--font-color-2);
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #4a689e;
+        transition: ease-in-out 150ms;
+    }
+}
+
+#classes .class-btn-group .class-btn.active {
+    background-color: var(--secondary-color);
+    transition: opacity 500ms ease;
+    opacity: 1;
+}
+
+.class-btn.active:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 12px 16px 0px 16px;
+    border-color: var(--secondary-color) transparent transparent  transparent;
+    transition: opacity 500ms ease;
+    opacity: 1;
+  }
+  
+.class-btn:not(.active):after {
+    opacity: 0;
+}
+
+#classes .content-box {
+    display: flex;
+    margin-top: 80px;
+    gap: 40px;
+}
+
+#classes .content-box img {
+    max-width: 50%;
+    border-radius: 4px;
+}
+
+#classes .content article {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#classes .content article:nth-child(1) {
+    margin-bottom: 24px;
+}
+
+/*değerlendirme kriteri 7: responsive tasarım*/
+@media (max-width: 575.98px) {
+    
+    #classes .class-btn-group {
+        gap: 24px 40px;
+        margin-top: 24px;
+    } 
+
+    #classes .class-btn-group .class-btn {
+        font-size: 20px;
+    }
+
+    #classes .content-box {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 24px;
+    }
+    
+    #classes .content-box img {
+        max-width: 100%;
+    }
+    
+    #classes .content article {
+        gap: 12px;
+    }
+    
+    #classes .content article:nth-child(1) {
+        margin-bottom: 0;
+    }
+}
